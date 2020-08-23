@@ -1,4 +1,4 @@
-package com.example.base
+package com.example.basemodule2.base
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +9,9 @@ import android.widget.TextView
 import android.widget.TextView.BufferType
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.base.BaseActivity
+import com.example.base.BaseViewModel
+import com.example.base.InitFragment
 import com.google.android.material.snackbar.Snackbar
 import org.koin.androidx.viewmodel.ext.android.getViewModel
 import java.lang.reflect.ParameterizedType

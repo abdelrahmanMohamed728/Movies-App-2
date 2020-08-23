@@ -1,4 +1,4 @@
-package com.example.moviesapp2.ui
+package com.example.moviesapp2.ui.splash
 
 import androidx.lifecycle.ViewModel
 import com.example.base.BaseViewModel
