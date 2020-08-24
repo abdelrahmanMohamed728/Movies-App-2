@@ -76,7 +76,7 @@ dependencies {
     //ViewPager2
     implementation "androidx.viewpager2:viewpager2:1.0.0"
 
-    //Design
+    //Material_Design
     implementation 'com.google.android.material:material:1.2.0-alpha04'
 
     // nav_component

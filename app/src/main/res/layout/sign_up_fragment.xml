@@ -1,13 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.signup.SignUpFragment">
 
-    <TextView
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/UsernameTextField"
+        android:theme="@style/TextInputLayoutAppearance"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="50dp"
+        android:hint="Username"
+        style="@style/SignUpTextField">
 
-</FrameLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/EmailTextField"
+        android:theme="@style/TextInputLayoutAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Email"
+        style="@style/SignUpTextField">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/PasswordTextField"
+        android:theme="@style/TextInputLayoutAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Password"
+        app:endIconMode="password_toggle"
+        style="@style/SignUpTextField">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:padding="5dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
