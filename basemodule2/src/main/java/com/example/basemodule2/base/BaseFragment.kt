@@ -8,10 +8,12 @@ import android.view.View
 import android.widget.TextView
 import android.widget.TextView.BufferType
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.base.BaseActivity
 import com.example.base.BaseViewModel
 import com.example.base.InitFragment
+import com.example.basemodule2.R
 import com.google.android.material.snackbar.Snackbar
 import org.koin.androidx.viewmodel.ext.android.getViewModel
 import java.lang.reflect.ParameterizedType
@@ -44,7 +46,11 @@ open class BaseFragment<T : BaseViewModel> : Fragment(), InitFragment {
     }
 
     fun showSnackBar(view: View, message: String) {
-        Snackbar.make(view, message, Snackbar.LENGTH_LONG).show()
+        Snackbar.make(view, message, Snackbar.LENGTH_LONG).setBackgroundTint(getSnackBarColor()).show()
+    }
+
+    private fun getSnackBarColor() : Int{
+        return ContextCompat.getColor(context!!, R.color.violet)
     }
 
     private fun getBaseActivity(): BaseActivity {
@@ -65,6 +71,7 @@ open class BaseFragment<T : BaseViewModel> : Fragment(), InitFragment {
         super.onViewCreated(view, savedInstanceState)
         initObservers()
         initRecycler()
+        initListeners()
     }
 
     override fun initObservers() {
@@ -72,6 +79,10 @@ open class BaseFragment<T : BaseViewModel> : Fragment(), InitFragment {
     }
 
     override fun initRecycler() {
+
+    }
+
+    override fun initListeners() {
 
     }
 

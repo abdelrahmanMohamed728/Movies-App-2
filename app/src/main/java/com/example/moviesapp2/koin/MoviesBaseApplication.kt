@@ -9,7 +9,7 @@ class MoviesBaseApplication : Application() {
         super.onCreate()
         startKoin {
             androidContext(this@MoviesBaseApplication)
-            modules(listOf(viewModels))
+            modules(listOf(viewModels, base , repos))
         }
     }
 }

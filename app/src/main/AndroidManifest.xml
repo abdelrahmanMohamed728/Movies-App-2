@@ -4,6 +4,7 @@
 
     <application
         android:allowBackup="true"
+        android:name=".koin.MoviesBaseApplication"
         android:icon="@drawable/ic_batman"
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_batman"
