@@ -1,35 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.signup.SignUpFragment">
+    tools:context=".ui.signin.SignInFragment">
 
     <TextView
         style="@style/TitleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Sign Up"></TextView>
+        android:text="Sign In"></TextView>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/UsernameTextField"
-        style="@style/SignUpTextField"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Username"
-        android:theme="@style/TextInputLayoutAppearance">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="5dp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/EmailTextField"
         style="@style/SignUpTextField"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -37,7 +22,7 @@
         android:theme="@style/TextInputLayoutAppearance">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/signUpEmailET"
+            android:id="@+id/signInEmailET"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textEmailAddress"
@@ -47,42 +32,33 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/PasswordTextField"
         style="@style/SignUpTextField"
+        app:endIconMode="password_toggle"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Password"
-        android:theme="@style/TextInputLayoutAppearance"
-        app:endIconMode="password_toggle">
+        android:theme="@style/TextInputLayoutAppearance">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/SignUpPasswordET"
+            android:id="@+id/signInPasswordET"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword"
             android:padding="5dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/already_have_account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="20dp"
-        android:textSize="15dp"
-        android:text="@string/already_have_account">
-    </TextView>
-
     <ProgressBar
-        android:id="@+id/signUpProgressBar"
+        android:id="@+id/signInProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:theme="@style/progressBar"
         android:visibility="gone">
+
     </ProgressBar>
 
     <Button
-        android:id="@+id/signUpButton"
+        android:id="@+id/signInButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

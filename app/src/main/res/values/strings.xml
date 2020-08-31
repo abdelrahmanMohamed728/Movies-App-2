@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MoviesApp2</string>
+    <string name="signUpSuccessful">"Your account has been created "</string>
+    <string name="signUpFailed">Sign up failed , Please try again</string>
+    <string name="signInSuccessful">Log in successful</string>
+    <string name="signInFailed">Log in failed</string>
+    <string name="already_have_account">Already have an account ? Log in</string>
 </resources>

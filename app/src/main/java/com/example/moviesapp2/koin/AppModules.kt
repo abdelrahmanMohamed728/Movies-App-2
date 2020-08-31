@@ -2,6 +2,7 @@ package com.example.moviesapp2.koin
 
 import com.example.base.BaseActivity
 import com.example.moviesapp2.repo.AuthenticationRepo
+import com.example.moviesapp2.ui.signin.SignInViewModel
 import com.example.moviesapp2.ui.signup.SignUpViewModel
 import com.example.moviesapp2.ui.splash.SplashViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -13,6 +14,9 @@ val viewModels = module {
     }
     viewModel {
         SignUpViewModel(get())
+    }
+    viewModel {
+        SignInViewModel(get())
     }
 }
 

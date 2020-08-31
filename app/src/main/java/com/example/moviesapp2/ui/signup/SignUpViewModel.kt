@@ -18,5 +18,9 @@ class SignUpViewModel(private var repo : AuthenticationRepo) : BaseViewModel() {
         repo.SignUp(email,password)
     }
 
+    fun removeObserver(){
+        signUpResponse = MediatorLiveData()
+    }
+
 
 }
