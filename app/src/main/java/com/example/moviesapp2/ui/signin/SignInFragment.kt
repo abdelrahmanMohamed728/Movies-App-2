@@ -8,6 +8,7 @@ import androidx.lifecycle.Observer
 import com.example.base.OnSingleClickListener
 import com.example.basemodule2.base.BaseFragment
 import com.example.moviesapp2.R
+import com.example.moviesapp2.ui.home.HomeActivity
 import kotlinx.android.synthetic.main.sign_in_fragment.*
 import kotlinx.android.synthetic.main.sign_up_fragment.*
 
@@ -45,6 +46,7 @@ class SignInFragment : BaseFragment<SignInViewModel>() {
         viewModel.addSignInObserver()
         viewModel.signInResponse.observe(this , Observer {
             if (it) {
+                addActivity(HomeActivity())
                 showSnackBar(requireView(), getString(R.string.signInSuccessful))
             } else
                 showSnackBar(requireView(), getString(R.string.signInFailed))
